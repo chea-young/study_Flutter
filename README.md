@@ -6,6 +6,8 @@
 ### QUIZ_APP_TEST/
 - django 앱
 
+<br>
+
 #### flutter 프로젝트 만들기
 - View -> Command Palette -> Flutter: New Projects -> 만들 어플 이름 enter
 
