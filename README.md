@@ -15,6 +15,9 @@
 - $flutter device
 - $flutter run
 
+#### flutter 사진 넣을 때
+- pubspec.yaml에 assert에 저장하기
+
 #### git 올리기
 - $ git add --all
 - $ git commit -m ''
