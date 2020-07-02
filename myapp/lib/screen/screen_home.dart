@@ -1,11 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/model/model_quiz.dart';
+import 'package:myapp/screen/screen_quiz.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
+// 퀴즈를 가져오는 것이 1. 앱이 실행 될 때 가져오는 것 2. 퀴즈 풀기 버튼을 눌렀을 때 가져오는 것
+// 이번에는 2번으로 할 예정
 
 class _HomeScreenState extends State<HomeScreen> {
+  //퀴즈 데이터
+  List<Quiz> quizs = [
+    Quiz.fromMap({
+      'title': 'test',
+      'candidates': ['a', 'b', 'c', 'd'],
+      'answer': 0
+    }),
+    Quiz.fromMap({
+      'title': 'test',
+      'candidates': ['a', 'b', 'c', 'd'],
+      'answer': 0
+    }),
+    Quiz.fromMap({
+      'title': 'test',
+      'candidates': ['a', 'b', 'c', 'd'],
+      'answer': 0
+    }),
+  ];
+
   @override
   Widget build(BuildContext context) {
     // MediaQuery 사용시 현재 기기의 여러 상태정보를 알 수 있다, 기기에 맞게 적용시킬 수 있다.
@@ -15,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return SafeArea(
       //기기의 상단 노티바 부분, 하단 영역을 침범하지 않겠다.
+      //화면에 맞는 앱디자인을 할 수 있다.
       child: Scaffold(
         appBar: AppBar(
           title: Text('My Quiz APP'),
@@ -68,7 +92,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(color: Colors.white),
                     ),
                     color: Colors.pink[200],
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => QuizScreen(
+                            quizs: quizs,
+                          ),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ),
