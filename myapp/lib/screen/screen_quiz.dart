@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:myapp/model/model_quiz.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:myapp/screen/screen_result.dart';
 import 'package:myapp/widget/widget_candidate.dart';
 
 //옆으로 넘어가는 화면을 만들기 위해서 flutter_swiper 사용
@@ -112,6 +113,15 @@ class _QuizScreenState extends State<QuizScreen> {
                       ? null
                       : () {
                           if (_currentIndex == widget.quizs.length - 1) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ResultScreen(
+                                  answers: _answers,
+                                  quizs: widget.quizs,
+                                ),
+                              ),
+                            );
                           } else {
                             _answerState = [false, false, false, false];
                             _currentIndex += 1;
