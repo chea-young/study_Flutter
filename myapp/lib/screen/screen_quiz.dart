@@ -106,8 +106,8 @@ class _QuizScreenState extends State<QuizScreen> {
                   child: _currentIndex == widget.quizs.length - 1
                       ? Text('결과보기')
                       : Text('다음문제'),
-                  textColor: Colors.black,
-                  color: Colors.yellow[400],
+                  textColor: Colors.white,
+                  color: Colors.pink[400],
                   // 선택을 하지 않았을 때가 -1, 그래서 못 넘어가게 하는 것
                   onPressed: _answers[_currentIndex] == -1
                       ? null

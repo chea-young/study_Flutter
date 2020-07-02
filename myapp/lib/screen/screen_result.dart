@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:myapp/model/model_quiz.dart';
 import 'package:myapp/screen/screen_home.dart';
-
 
 class ResultScreen extends StatelessWidget {
   List<int> answers;
@@ -112,8 +110,8 @@ class ResultScreen extends StatelessWidget {
                           }));
                         },
                         child: Text('홈으로 돌아가기'),
-                        color: Colors.yellow[400],
-                        textColor: Colors.black,
+                        color: Colors.pink[400],
+                        textColor: Colors.white,
                       ),
                     ),
                   ),
