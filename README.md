@@ -25,3 +25,9 @@
 
 #### git remote에서 받아오기
 - $ git pull
+
+#### django 만들때
+- $ $ source venv/Scripts/activate
+- $ pip install django djangorestframework
+- $ django-admin startproject myapi .
+- $ python manage.py startapp quiz
